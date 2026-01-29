@@ -51,7 +51,7 @@ a {text-decoration: none;}
 
 .right {
     display: flex;
-    width: 400px;
+    max-width: 400px;
     background-color: #E5E7EB;
     justify-content: center;
     align-items: center;

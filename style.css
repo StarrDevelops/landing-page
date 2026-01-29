@@ -1,26 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 body {
+    margin: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    flex: 1;
-    font-family: 'Roboto', sans-serif;
-    justify-content: center;
 }
 
 ul {list-style-type: none;}
 a {text-decoration: none;}
 
+.header, .top-bar, .information, .quote, .recruiter, .footer {
+    display: flex;        
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+}
+
 .header, .top-bar {
     background-color: #1F2937;
     display: flex;
-}
-
-.header {
-    justify-content: space-between;
-}
-
-.top-bar {
     justify-content: center;
+    padding: 0;
+}
+
+.utility {
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;  
+}
+
+.header .utility {
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.top-bar .utility {
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 0;
 }
 
 .left {
@@ -32,16 +51,19 @@ a {text-decoration: none;}
 
 .right {
     display: flex;
-    height: 200px;
     width: 400px;
     background-color: #E5E7EB;
     justify-content: center;
     align-items: center;
 }
 
-h1, .left p, .left div {
-    display: flex;
-    justify-content: flex-start;
+h1, .left p {
+    margin: 0;
+}
+
+.left p {
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .links {
@@ -52,7 +74,12 @@ h1, .left p, .left div {
 
 .information {
     display: flex;
+}
+
+.information .utility {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -62,9 +89,18 @@ h1, .left p, .left div {
     align-items: center;
 }
 
+.item {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    height: auto;
+    padding: 24px;
+}
+
 .item img {
     border: #3882F6;
     border-style: solid;
+    border-radius: 10%;
     width: 100px;
     height: 100px;
 }
@@ -74,18 +110,38 @@ h1, .left p, .left div {
     align-items: center;
 }
 
+.item p {
+    word-wrap: break-word;
+    text-align: center;
+}
+
 .quote {
     background-color: #E5E7EB;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.quote .utility {
+    flex-direction: column;
+    align-items: center;
 }
 
 .quote p {
     font-size: 36px;
     font-weight: 300;
     color: #1F2937;
+    margin-bottom: 0;
 }
 
 .name {
-    justify-self: end;
+    align-self: end;
+}
+
+.quote .name {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 16px;
 }
 
 a, .left p {
@@ -99,6 +155,12 @@ h1 {
     color: #F9FAF8;
 }
 
+h3 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+}
+
 .header p {
     font-size: 24px;
     color: #F9FAF8;
@@ -109,8 +171,49 @@ button, .recruiter {
     color: #F9FAF8;
 }
 
+.recruiter {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.blue-box {
+    background-color: #3882F6;
+    color: white;
+    padding: 40px 80px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.recruiter h4, .recruiter p {
+    margin: 0;
+}
+
+.recruiter h4 {
+    margin-bottom: 4px;
+}
+
+.signup {
+    margin-top: 0;
+}
+
 button {
     padding: 8px;
-    border-radius: 10%;
+    border-radius: 8px;
     padding: 4px 16px;
+}
+
+.bottom-button {
+    border: 1px, solid, #F9FAF8;
+}
+
+.footer {
+    display: flex;
+    background-color: #1F2937;
+    align-items: flex-end;
+    justify-content: center;
+    color: #F9FAF8;
+    margin-top: auto;
 }
